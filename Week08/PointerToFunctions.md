@@ -60,19 +60,19 @@ void filterArray(T* arr, size_t arr_size, comparatorFunc<T> comparator) {
 }
 
 int main() {
-    void (*fncPtr)(int, int); // стандартен указател към функция тук името на 
-                             //  указателя е в средните скоби
+    void (*fncPtr)(int, int); // стандартен указател към функция тук името на указателя е в средните скоби
     fncPtr = onePlusOnePrint;  // насочваме го
 
-    auto fncPtrTwo = onePlusOnePrint; // auto ще сложи подходящ тип на fncPtrTwo.   
+    fncPtrTwo functwo = onePlusOnePrint;
+    // auto functtwo = onePlusOnePrint; auto ще сложи подходящ тип на fnctwo.
+    // НО не се препоръчва използването на auto!    
 
     fncPtr(1,5); // принтира 6
-    fncPtrTwo(1,5); // принтира 6
+    functwo(1,5); // принтира 6
 
     int arr[5] = {6,4,5,3,1};
     size_t arr_size = 5;
-    mapArr<int>(arr,arr_size,increment); // директно си подаваме името на функцията 
-                                        //  като аргумент.
+    mapArr<int>(arr,arr_size,increment); // директно си подаваме името на функцията като аргумент;
 
     for (size_t i = 0; i < arr_size; i++)
     {
@@ -83,8 +83,8 @@ int main() {
     
     int arr2[5] = {1,2,3,4,5};
     size_t arr2_size = 5;
-    filterArray<int>(arr2,arr2_size,isEven); // ще изпринтира само четните числа (ще ги 
-                                            //  филтрира :) )
-    filterArray<int>(arr2,arr2_size,isOdd); // ще изпринтира само нечетните числа
+    filterArray<int>(arr2,arr2_size,isEven);  // ще изпринтира само четните числа 
+                                             // (ще ги филтрира :) )
+    filterArray<int>(arr2,arr2_size,isOdd); //  ще изпринтира само нечетните числа
 }
 ```

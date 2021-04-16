@@ -31,8 +31,13 @@ int main() {
 
     int a = 5;
     auto maplambdaTwo = [a] (int x) -> int{return x + a;};
+    
     auto maplambdaThree = [&a] () -> void { a = 10; }; // просто ще променим "а" тъй като 
                                                       //  сме я взели по референция :)
+
+    // auto не се препоръчва да се използва, тук е просто да се види пример за ламбда
+    // използвайте std::function както е описано по - долу
+    
     std::cout << maplambdaTwo(1) <<  std::endl; // ще изпринтира 6;
     maplambdaThree(); // "а" ще стане 6
     std::cout << a << std::endl; // доказателство
