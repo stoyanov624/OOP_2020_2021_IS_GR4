@@ -10,8 +10,9 @@
 
 ### Напишете клас TechShop, който ще се състои от вектор от технологии и методи:
 * printAllTechnology
-* lowerComputerPrices
-*
+* lowerComputerPrices(double n) - намалява цените на компютрите с n процента
+* lowerTabletPrices(double n) - намалява цените на таблетите с n процента
+* lowerPhonePrices(double n) - намалява цените на телефоните с n процента
 
 ## TASK 2 - Vector Utils
 ### Напишете клас VectorUtils, който да съдържа в себе си методите:
